@@ -1,0 +1,878 @@
+�
+
+U-Boot 1.1.4--LSDK-10.2-00082-4 (Jul  3 2018 - 16:11:24)
+
+board956x - Dragonfly 1.0DRAM:
+sri
+ath_ddr_initial_config(287): (ddr2 init)
+ath_ddr_initial_config: DDR_EMR2_ADDRESS=0x180000bc, EMR2 value=0x80
+ath_sys_frequency: ref_clk 25000000
+ath_sys_frequency: cpu 775 ddr 650 ahb 258
+Tap values = (0x11, 0x11, 0x11, 0x11)
+128 MB
+Top of RAM usable for U-Boot at: 88000000
+Reserving 165k for U-Boot at: 87fd4000
+Reserving 192k for malloc() at: 87fa4000
+Reserving 44 Bytes for Board Info at: 87fa3fd4
+Reserving 36 Bytes for Global Data at: 87fa3fb0
+Reserving 128k for boot params() at: 87f83fb0
+Stack Pointer at: 87f83f98
+Now running in RAM - U-Boot at: 87fd4000
+Flash Manuf Id 0xc8, DeviceId0 0x40, DeviceId1 0x18
+flash size 16MB, sector count = 256
+Flash: 16 MB
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Setting 0x181162c0 to 0x30602100
+Hit Ctrl+B to stop autoboot:  0
+Loading .text @ 0x80304800 (12496 bytes)
+Loading .rodata.str1.4 @ 0x803078d0 (676 bytes)
+Loading .data @ 0x80307b80 (1283328 bytes)
+Clearing .bss @ 0x80441080 (4202512 bytes)
+## Starting application at 0x80304800 ...
+BOOT CONFIG:     80208482
+zimage at:     80307B80 80441080
+Uncompressing Linux at load address 80060000
+Now, booting the kernel...
+[    0.000000] Linux version 3.3.8 (jenkins@sohoiapbuild) (gcc version 4.3.3 (GCC) ) #1 Thu Apr 4 15:56:59 CST 2019
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU revision is: 00019750 (MIPS 74Kc)
+[    0.000000] SoC: Qualcomm Atheros QCA956X rev 0
+[    0.000000] Clocks: CPU:775.000MHz, DDR:650.000MHz, AHB:258.333MHz, Ref:25.000MHz
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] User-defined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone PFN ranges:
+[    0.000000]   Normal   0x00000000 -> 0x00008000
+[    0.000000] Movable zone start PFN for each node
+[    0.000000] Early memory PFN ranges
+[    0.000000]     0: 0x00000000 -> 0x00008000
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line:  0x9f040000 console=ttyS0,115200 root=31:04 rootfstype=squashfs init=/init mtdparts=spi0.0:128k(u-boot),64k(pation-table),64k(product-info),1536k(kernel),13568k(rootfs),192k(config),512k(mutil-log),256k(oops),64k(ART) mem=128M board=AP152
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 126604k/131072k available (2028k kernel code, 4468k reserved, 498k data, 180k init, 0k highmem)
+[    0.000000] SLUB: Genslabs=9, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:83
+[    0.000000] Calibrating delay loop... 385.84 BogoMIPS (lpj=1929216)
+[    0.060000] pid_max: default: 32768 minimum: 301
+[    0.060000] Mount-cache hash table entries: 512
+[    0.070000] NET: Registered protocol family 16
+[    0.070000] gpiochip_add: registered GPIOs 0 to 22 on device: ath79
+[    0.080000] MIPS: machine is Qualcomm Atheros AP152 reference board
+[    0.600000] Max resets limit reached exiting...
+[    0.610000]
+[    0.610000] WLAN firmware dump buffer allocation of 2097152 bytes @ address 0x87a00000- SUCCESS !!!
+[    0.620000] registering PCI controller with io_map_base unset
+[    0.830000] bio: create slab <bio-0> at 0
+[    0.830000] PCI host bridge to bus 0000:00
+[    0.830000] pci_bus 0000:00: root bus resource [mem 0x12000000-0x13ffffff]
+[    0.840000] pci_bus 0000:00: root bus resource [io  0x0001]
+[    0.840000] pci 0000:00:00.0: BAR 0: assigned [mem 0x12000000-0x121fffff 64bit]
+[    0.850000] pci 0000:00:00.0: using irq 40 for pin 1
+[    0.850000] Switching to clocksource MIPS
+[    0.860000] NET: Registered protocol family 2
+[    0.860000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.860000] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.870000] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.870000] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.880000] TCP reno registered
+[    0.880000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.890000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.890000] NET: Registered protocol family 1
+[    0.910000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.910000] msgmni has been set to 247
+[    0.920000] io scheduler noop registered
+[    0.920000] io scheduler deadline registered (default)
+[    0.930000] Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+[    0.950000] serial8250.0: ttyS0 at MMIO 0x18020000 (irq = 11) is a 16550A
+[    0.960000] console [ttyS0] enabled, bootconsole disabled
+[    0.960000] console [ttyS0] enabled, bootconsole disabled
+[    0.970000] m25p80 spi0.0: m25p80 (16384 Kbytes)
+[    0.980000] 9 cmdlinepart partitions found on MTD device spi0.0
+[    0.980000] Creating 9 MTD partitions on "spi0.0":
+[    0.990000] 0x000000000000-0x000000020000 : "u-boot"
+[    1.000000] 0x000000020000-0x000000030000 : "pation-table"
+[    1.000000] 0x000000030000-0x000000040000 : "product-info"
+[    1.010000] 0x000000040000-0x0000001c0000 : "kernel"
+[    1.010000] 0x0000001c0000-0x000000f00000 : "rootfs"
+[    1.020000] mtd: partition "rootfs" set to be root filesystem
+[    1.030000] 0x000000f00000-0x000000f30000 : "config"
+[    1.030000] 0x000000f30000-0x000000fb0000 : "mutil-log"
+[    1.040000] 0x000000fb0000-0x000000ff0000 : "oops"
+[    1.050000] 0x000000ff0000-0x000001000000 : "ART"
+[    1.060000] ag71xx_mdio: probed
+[    1.060000] eth0: Atheros AG71xx at 0xb9000000, irq 4
+[    1.620000] ar8033_config_init 132 0xe=6
+[    1.620000] ar8033_config_init 135 0xe=0
+[    1.630000] ar8033_config_init 142 0xe=3732
+[    1.630000] ar8033_config_init 146 0xe=1732
+[    1.640000] ar8033_config_init 152 0x00=1000
+[    1.640000] ag71xx ag71xx.0: eth0: connected to PHY at ag71xx-mdio.0:04 [uid=004dd074, driver=Qualcomm Atheros AR8033 PHY]
+[    1.650000] TCP cubic registered
+[    1.660000] NET: Registered protocol family 17
+[    1.660000] 8021q: 802.1Q VLAN Support v1.8
+[    1.670000] ### of_selftest(): No testcase data in device tree; not running tests
+[    1.680000] VFS: Mounted root (squashfs filesystem) readonly on device 31:4.
+[    1.690000] Freeing unused kernel memory: 180k freed
+init started: BusyBox v1.20.2 (2019-04-04 16:02:16 CST)
+starting pid 216, tty '': '/etc/rc.d/rcS >/dev/console 2>&1'
+cp: can't stat '/lib/firmware/AR900B/hw.2/boarddata_eu.bin': No such file or directory
+cp: can't stat '/lib/firmware/AR900B/hw.2/boarddata_eu.bin': No such file or directory
+This board use 3.3.8
+[    2.500000] mtdoops: Attached to MTD device 7
+insmod: can't insert '/lib/modules/3.3.8/kernel/xt_iprange.ko': No such file or directory
+[    2.640000] xt_time: kernel timezone is -0000
+[    2.650000] nf_conntrack version 0.5.0 (1981 buckets, 15848 max)
+[    2.800000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.890000] Ebtables v2.0 registered
+insmod: can't insert '/lib/modules/3.3.8/kernel/ts_kmp.ko': No such file or directory
+insmod: can't insert '/lib/modules/3.3.8/kernel/br_filter.ko': No such file or directory
+[    2.940000] ---portal module open ok
+[    2.950000] Register vlan_manage hooks success.
+insmod: can't insert '/lib/modules/3.3.8/kernel/statistics.ko': No such file or directory
+[    2.970000] [Debug gpio_parse_conf:261] Open File /etc/gpio.conf SUCCESS!!
+[    2.990000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 14, readCount 256
+[    3.000000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 44, readCount 256
+[    3.010000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 6 , readCount 256
+[    3.010000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 7 , readCount 256
+[    3.020000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 2 , readCount 256
+[    3.030000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 7 , readCount 256
+[    3.040000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 44, readCount 256
+[    3.050000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 6 , readCount 256
+[    3.050000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 7 , readCount 256
+[    3.060000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 2 , readCount 256
+[    3.070000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 7 , readCount 256
+[    3.080000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 44, readCount 256
+[    3.090000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 7 , readCount 247
+[    3.090000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 6 , readCount 240
+[    3.100000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 6 , readCount 234
+[    3.110000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 6 , readCount 228
+[    3.120000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 2 , readCount 222
+[    3.120000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 51, readCount 220
+[    3.130000] [Debug gpio_parse_conf:284] Ignore line (0), skipLen 44, readCount 169
+[    3.140000] [Debug gpio_parse_conf:312] GPIO Parse OK:  led_green   led(1) low (0) low (0) 7
+[    3.150000] [Debug gpio_parse_conf:312] GPIO Parse OK:  led_yellow  led(1) low (0) high(1) 9
+[    3.160000] [Debug gpio_parse_conf:312] GPIO Parse OK:  btn_reset   btn(2) low (0) high(1) 2
+[    3.170000] [Debug btn_netlink_init:162] btn: create netlink socket SUCCESS.
+[    3.170000] [Debug wdt_module_init:220] Create watchdog proc dir SUCCESS.
+[    3.180000] [Debug led_entry_handler:755] Create led_green   proc dir SUCCESS.
+[    3.190000] [Debug led_entry_handler:755] Create led_yellow  proc dir SUCCESS.
+[    3.200000] [Debug btn_entry_handler:465] Init button: btn_reset 2 2 0 success.
+wlanmonitor is not supported.
+a[    3.550000] [Debug btn_netlink_receive:71] BTN netlink with user space daemon 324 SUCCESS.
+p_watchdog is not supported.
+[NM_Debug](nm_lock_init) 00149: create semaphore...
+[NM_Debug](parsePtnTableFromNvramToStruct) 00180: NM_PTN_TABLE_BASE = 0x20000
+starting pid 331, tty '': '/sbin/getty ttyS0 115200'
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode repeat, delayon 200, delayoff 200, blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode repeat, delayon 200, delayoff 200, blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode repeat, delayon 500, delayoff 500, blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode repeat, delayon 500, delayoff 500, blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode repeat, delayon 200, delayoff 200, blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode on   , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode blink, delayon 500, delayoff 500, blinkCount 4.
+[Debug checkLedParamValid:341] Param: mode disable, delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode enable, delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode blink, delayon 200, delayoff 200, blinkCount 3000.
+[Debug checkLedParamValid:341] Param: mode stop , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode off  , delayon 0  , delayoff 0  , blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode repeat, delayon 4200, delayoff 800, blinkCount 0.
+[Debug checkLedParamValid:341] Param: mode stop , delayon 0  , delayoff 0  , blinkCount 0.
+LED_RESET
+        { led_green     off      1   0   0   0 }
+        { led_yellow    off      1   0   0   0 }
+        { led_yellow    repeat   1   200 200 0 }
+        { led_green     repeat   1   200 200 0 }
+LED_UPDATE_START
+        { led_green     off      1   0   0   0 }
+        { led_yellow    off      1   0   0   0 }
+        { led_yellow    repeat   1   500 500 0 }
+        { led_green     repeat   1   500 500 0 }
+LED_UPDATE_FINISH
+        { led_yellow    off      1   0   0   0 }
+        { led_green     off      1   0   0   0 }
+LED_DUT_NO_CALDATA
+        { led_green     off      0   0   0   0 }
+        { led_yellow    repeat   4   200 200 0 }
+LED_SYS_INIT_PROCESS
+        { led_yellow    off      0   0   0   0 }
+        { led_green     on       0   0   0   0 }
+LED_SYS_INIT_OK
+        { led_yellow    off      0   0   0   0 }
+        { led_green     blink    0   500 500 4 }
+LED_DISABLE_ALL
+        { led_green     disable  2   0   0   0 }
+LED_ENABLE_ALL
+        { led_green     enable   0   0   0   0 }
+LED_LOCATE
+        { led_green     blink    3   200 200 3000 }
+LED_LOCATE_STOP
+        { led_green     stop     1   0   0   0 }
+LED_ISOLATED_START
+        { led_yellow    off      0   0   0   0 }
+        { led_green     repeat   2   4200 800 0 }
+LED_ISOLATED_FINISH
+        { led_green     stop     0   0   0   0 }
+[NM_Debug](parsePtnTableFromNvramToStruct) 00180: NM_PTN_TABLE_BASE = 0x20000
+
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+ (none) mips #1 Thu Apr 4 15:56:59 CST 2019 (none)
+(none) login: Into util_dbg_setMod, pModName(all), enable(1)
+[NM_Debug](parsePtnTableFromNvramToStruct) 00180: NM_PTN_TABLE_BASE = 0x20000
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[Debug ledListenEventHandler:148] Accept a new client.
+[Debug ledClientEventHandler:[    4.350000] [Debug led_proc_write:623] Write led_yellow.
+110] GPIOD recei[    4.350000] [Debug led_common_write_proc:470] Execute LED action: ved led rule: LE   { 1   0   0   0   0 }
+D_SYS_INIT_PROCESS.
+[    4.420000] [Debug led_proc_write:623] Write led_green.
+[    4.420000] [Debug led_common_write_proc:470] Execute LED action:    { 2   0   0   0   0 }
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+<debug>_radio_region_init(): 156  @ read next region flag, parse finish
+<debug>_radio_region_init(): 185  @ region:276, parse channel num:13
+<debug>_radio_region_init(): 156  @ read next region flag, parse finish
+<debug>_radio_region_init(): 185  @ region:276, parse channel num:19
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+GBK essid(TP-Link_2.4GHz_7F149A)
+UTF8 essid(TP-Link_2.4GHz_7F149A)
+GBK essid(TP-Link_5GHz_7F149B)
+UTF8 essid(TP-Link_5GHz_7F149B)
+[Debug ledListenEventHandler:148] Accept a new client.
+[Debug ledClientEventHandler:110] GPIOD received led rule: LED_ENABLE_ALL.
+[    5.350000] [Debug led_proc_write:623] Write led_green.
+[    5.350000] [Debug led_common_write_proc:470] Execute LED action:    { 5   0   0   0   0 }
+[    5.360000] [NOTICE led_common_write_proc:507] pledconf->backup.mode 0 1
+[    5.430000]
+[    5.430000] Disable VlanManage, data.enable(0), data.vid(1)
+[NM_Debug](nm_li[    5.440000] ath_spi_uid_read 0x39313633
+b_readPtnFromNvr[    5.450000] ath_spi_uid_read 0x340b2304
+am) 00736: partition name not found(name:sign-flag), read from special ptn.
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:signature), read from special ptn.
+
+Rsa verify success
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsC[    5.560000]
+[    5.560000] manage vlan set port: ssh (22), http (80), https (443)
+fg:358] failed t[    5.570000]
+[    5.570000] manage vlan set port: ssh (22), http (80), https (443)
+o open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp[    5.600000] ath_spi_uid_read 0x39313633
+_getDnsCfg:358] [    5.600000] ath_spi_uid_read 0x340b2304
+failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NTP_ERROR]<error>[_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NT[    5.630000] adf: module license 'Proprietary' taints kernel.
+P_ERROR]<error>[[    5.640000] Disabling lock debugging due to kernel taint
+_ntp_getDnsCfg:358] failed to open file /tmp/resolv.conf:2(No such file or directory).
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:sign-flag), read from special ptn.
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:signature), read from special ptn.
+
+Rsa verify success
+insmod: can't insert '/lib/modules/3.3.8/net/ath_spectral.ko': No such file or directory
+[    5.990000] ath_tx99: Version 2.0
+[    5.990000] Copyright (c) 2010 Atheros Communications, Inc, All Rights Reserved
+[    7.320000] __ath_attach: Set global_scn[0]
+[    7.330000] *** All the minfree values should be <= ATH_TXBUF-32, otherwise default value will be used instead ***
+[    7.340000] ACBKMinfree = 48
+[    7.340000] ACBEMinfree = 32
+[    7.340000] ACVIMinfree = 16
+[    7.350000] ACVOMinfree = 0
+[    7.350000] CABMinfree = 48
+[    7.350000] UAPSDMinfree = 0
+[    7.360000] ATH_TXBUF=2700
+[    7.370000]
+[    7.370000] ART Version : -48.0.0
+[    7.370000] SW Image Version : -48.0.0.0.0
+[    7.380000] Board Revision :
+[    7.380000] ar9300_attach: nf_2_nom -110 nf_2_max -60 nf_2_min -125
+[    7.390000] ath_get_caps[6410] rx chainmask mismatch actual 3 sc_chainmak 0
+[    7.400000] ath_get_caps[6385] tx chainmask mismatch actual 3 sc_chainmak 0
+[    7.410000] band steering initialized for direct attach hardware
+[    7.420000] ath_attach_dfs[13050] dfsdomain 1
+[    7.430000] dfs_attach: event log enabled by default
+[    7.440000]
+[    7.440000] ****************************************************
+[    7.450000]                    maclimit init
+[    7.450000] ****************************************************
+[    7.460000] ald_init_netlink NETLINK_KERNEL_CREATE FAILED
+[    7.470000] ath_tx_paprd_init sc 872a8000 PAPRD disabled in HAL
+[    7.480000] PCI: Enabling device 0000:00:00.0 (0000 -> 0002)
+[    7.490000]
+[    7.490000] __ol_ath_attach() Allocated scn 85dc0380
+[    7.510000] ol_ath_attach interface_id 1
+[    7.520000] Chip id: 0xc, chip version: 0x1000000
+[    7.520000]
+[    7.520000]  Target Version is 1000000
+[    7.530000]
+[    7.530000]  Flash Download Address  c0000
+[    7.530000] ol_transfer_bin_file: flash data file defined
+[    7.540000] Cal location [0]: 00004000
+[    7.540000]
+[    7.540000]  wifi1 NAND FLASH Select OFFSET 0x5000
+[    7.560000] qc98xx_verify_checksum: flash checksum passed: 0xcc9d
+[    7.560000] ol_transfer_bin_file 3580: Download Flash data len 12064
+[    7.590000]
+[    7.590000]  Board data initialized
+[    7.930000] ol_ath_download_firmware :First OTP download and Execute is good address:0x6000 return param 4660
+[    7.940000] ol_ath_download_firmware:##Board Id 24 , CHIP Id 0
+[    7.940000]
+[    7.940000]  wifi1: Selecting board data file name boardData_2_0_QCA9888_5G_YA105.bin
+[    7.950000] ol_transfer_bin_file: Board Data File download to address=0xc0000 file name=QCA9888/hw.2/boardData_2_0_QCA9888_5G_YA105.bin
+[    8.030000]
+[    8.030000]  [Flash] : Ignore Module param
+[    8.280000] ol_ath_download_firmware : Second OTP download and Execute is good, param=0x0
+[    8.390000] ol_transfer_bin_file: Downloading firmware file: QCA9888/hw.2/athwlan.bin
+[   10.220000] Startup Mode-0 set
+[   10.230000] HTC Service:0x0300 ep:1 TX flow control disabled
+[   10.240000] htt_peer_map_timer_init Enter pdev 859e8000 hrtimer 859ec800
+[   10.240000]
+[   10.240000]  htt_alloc_peer_map_mem : Alloc Success : host q vaddr 85a30000 paddr 5a30000
+[   10.250000]
+[   10.250000]  htt_alloc_peer_map_mem : Flush Interval Configured to 256 pkts
+[   10.270000] HTC Service:0x0100 ep:2 TX flow control disabled
+[   10.270000] Firmware_Build_Number:99
+[   10.280000] num_rf_chain:0x00000002  ht_cap_info:0x0000085b  vht_cap_info:0x339979f2  vht_supp_mcs:0x0000fffa
+[   10.290000]
+[   10.290000]  RES CFG Support wmi_service_bitmap 9778
+[   10.290000]
+[   10.290000]  Sending Ext resource cfg: HOST PLATFORM as 1 and fw_feature_bitmap as 50 to TGT
+[   10.300000] ol_ath_alloc_host_mem_chunk req_id 2 idx 0 num_units 53 unit_len 256,
+[   10.310000] ol_ath_alloc_host_mem_chunk req_id 3 idx 1 num_units 53 unit_len 1024,
+[   10.320000] ol_ath_alloc_host_mem_chunk req_id 4 idx 2 num_units 53 unit_len 4096,
+[   10.330000] ol_ath_alloc_host_mem_chunk req_id 1 idx 3 num_units 265 unit_len 872,
+[   10.340000] ol_ath_alloc_host_mem_chunk req_id 1 idx 4 num_units 266 unit_len 872,
+[   10.350000] ol_ath_alloc_host_mem_chunk req_id 5 idx 5 num_units 132 unit_len 1892,
+[   10.360000] ol_ath_alloc_host_mem_chunk req_id 5 idx 6 num_units 133 unit_len 1892,
+[   10.370000] ol_ath_alloc_host_mem_chunk req_id 5 idx 7 num_units 133 unit_len 1892,
+[   10.380000] ol_ath_alloc_host_mem_chunk req_id 5 idx 8 num_units 133 unit_len 1892,
+[   10.430000] wmi_ready_event_rx:  WMI UNIFIED READY event
+[   10.440000] dfs_attach: event log enabled by default
+[   10.450000]
+[   10.450000] ****************************************************
+[   10.460000]                   tp mesh init
+[   10.460000] ****************************************************
+[   10.470000] ald_init_netlink NETLINK_KERNEL_CREATE FAILED
+[   10.480000] ol_ath_thermal_mitigation_attach: --
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+[   10.550000] ath_attach_dfs[13050] dfsdomain 1
+[   10.560000] dfs_attach: event log enabled by default
+Interface doesn't accept private ioctl...
+HALDbg (8BE0): Operation not permitted
+[   10.680000] wlan_vap_create : enter. devhandle=0x872b0380, opmode=IEEE80211_M_HOSTAP, flags=0x1
+[   10.680000]
+[   10.690000] ieee80211_mbo_vattach:MBO Initialized
+[   10.700000] wlan_vap_create : exit. devhandle=0x872b0380, opmode=IEEE80211_M_HOSTAP, flags=0x1.
+[   10.700000]
+[   10.710000] VAP device ath0 created osifp: (85149380) os_if: (85c20000)
+ath0
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+[   10.830000] siwfreq
+[   10.830000] Set freq vap 0 stop send + 85c20000
+[   10.840000] Set freq vap 0 stop send -85c20000
+[   10.870000] Set wait done --85c20000
+[   10.880000]
+[   10.880000]  DES SSID SET=TP-Link_2.4GHz_7F149A
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+[   12.060000] isCountryCodeValid: EEPROM regdomain 0x0
+Invalid command : HALDbg
+Invalid command : chainmasksel
+Interface doesn't accept private ioctl...
+AMPDU (8BE0): Operation not permitted
+Interface doesn't accept private ioctl...
+AMPDUFrames (8BE0): Operation not permitted
+Interface doesn't accept private ioctl...
+AMPDULim (8BE0): Operation not permitted
+[   12.220000] wmi_unified_vdev_create_send: ID = 0 Type = 1, Subtype = 0 VAP Addr = 50:d4:f7:7f:14:9b:
+[   12.230000] ieee80211_mbo_vattach:MBO Initialized
+[   12.230000] VAP device ath10 created osifp: (871f8b80) os_if: (85c0c000)
+ath10
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+[   12.280000] ME Pool succesfully initialized vaddr - 85160000 paddr - 0
+[   12.280000] num_elems = 1424 buf_size - 64 pool_size = 102528
+[   12.290000] Enable MCAST_TO_UCAST
+[   12.350000] set channellimit = 0
+[   12.410000] siwfreq
+[   12.410000] Set freq vap 0 stop send + 85c0c000
+[   12.410000] Set freq vap 0 stop send -85c0c000
+[   12.450000] Set wait done --85c0c000
+[   12.460000]
+[   12.460000]  DES SSID SET=TP-Link_5GHz_7F149B
+[   12.510000] WARNING: Fragmentation with HT mode NOT ALLOWED!!
+Error for wireless request "Set Fragmentation Threshold" (8B24) :
+    SET failed on device ath10 ; Invalid argument.
+[   13.440000] Switching to Tx Mode-0
+[   14.800000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   14.910000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   14.990000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.070000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.150000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.230000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.310000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.390000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.470000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.550000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.630000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.710000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.790000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.870000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   15.950000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.030000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.110000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.190000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.270000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.350000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.430000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.510000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.590000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.670000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.750000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.830000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.910000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   16.990000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.070000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.150000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.230000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.310000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.390000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.470000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.550000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.630000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.710000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.790000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   17.840000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   17.880000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   17.920000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   17.960000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.000000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.040000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.080000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.120000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.160000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.200000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.240000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.280000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.320000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.360000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.400000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.440000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.480000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.520000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.560000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.600000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.640000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.680000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.720000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.760000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.800000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.840000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.880000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.920000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   18.960000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.000000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.040000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.080000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.120000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.160000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.200000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.240000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.280000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.320000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+<error>radio_region_getChanCommonFlag(): 614  @ invalid chanIndex:0, current channelNum = 19
+[   19.410000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[   19.490000] mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+[NM_Debug](nm_lib_readPtnFromNvr[   19.580000] tp mesh events being sent to PID:894
+am) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
+[   19.680000] wmi_unified_vdev_create_send: ID = 1 Type = 1, Subtype = 0 VAP Addr = 56:d4:f7:7f:14:9b:
+[   19.690000] ieee80211_mbo_vattach:MBO Initialized
+[   19.700000] VAP device bkhap1 created osifp: (851bcb80) os_if: (851f0000)
+bkhap1
+[   19.720000]  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+List Flushed
+[   19.880000] set channellimit = 0
+[   19.900000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.970000]
+[   19.970000]  DES SSID SET=mesh_50d4f77f149a
+[   20.010000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+[Debug ledListenEventHandler:148] Accept a new client.
+[Debug ledClientEventHandler:110] GPIOD received led rule: LED_SYS_INIT_OK.
+[   20.080000] [Debug led_proc_write:623] Write led_yellow.
+[   20.080000] [Debug led_common_write_proc:470] Execute LED action:    { 1   0   0   0   0 }
+[   20.110000] [Debug led_proc_write:623] Write led_green.
+[   20.120000] [Debug led_common_write_proc:470] Execute LED action:    { 3   0   500 500 4 }
+now ok to start tddp---------------------
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:sign-flag), read from special ptn.
+[   20.150000] ath_spi_uid_read 0x39313633
+[   20.150000] ath_spi_uid_read 0x340b2304
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:signature), read from special ptn.
+
+Rsa verify success
+[NM_Debug](parsePtnTableFromNvramToStruct) 00180: NM_PTN_TABLE_BASE = 0x20000
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[TDDP_DEBUG]<debug>[main:1213] tddp init---
+Reading topology file /tmp/topologyBkhAp.conf ...
+819.901: Reading radio configuration file /tmp/80211g.ap_radio ...
+
+819.902: Reading bss co[   20.380000]  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+nfiguration file[   20.380000] osif_vap_stop: Scan in progress.. Cancelling it. vap: 0x851f0000
+ /tmp/bkhAp.ap_bss ...
+
+Using interface bkhap1 with hwaddr 56:d4:f7:7f:14:9b and ssid 'mesh_50d4f77f149a'
+[   20.520000]
+[   20.520000]  DES SSID SET=mesh_50d4f77f149a
+[   20.530000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+l2_packet_receive - recvfrom: Network is down
+route: SIOCDELRT: No such process
+connect: No such file or directory
+[   25.760000] ACS failed to derive the channel. So,selecting channel with least BSS
+[   25.770000] random channel is 40
+[   25.780000] ******** ACS report ********
+[   25.790000]  Channel | BSS  | minrssi | maxrssi | NF | Ch load | spect load | sec_chan
+[   25.800000] ---------------------------------------------------------------------
+[   25.800000]  5180( 36)    1        7         7    -99       2           0          1
+[   25.810000]  5200( 40)    0        0         0    -99       1           0          1
+[   25.820000]  5220( 44)    0        0         0   -100       1           0          1
+[   25.830000]  5240( 48)    1       19        19   -100       1           0          1
+[   25.840000]  5260( 52)    0        0         0   -101       0           0          0
+[   25.850000]  5280( 56)    0        0         0   -101       0           0          0
+[   25.850000]  5300( 60)    0        0         0   -101       0           0          0
+[   25.860000]  5320( 64)    0        0         0   -102       0           0          0
+[   25.870000]  5500(100)    0        0         0   -103       0           0          0
+[   25.880000]  5520(104)    0        0         0   -102       0           0          0
+[   25.890000]  5540(108)    0        0         0   -103       0           0          0
+[   25.890000]  5560(112)    0        0         0   -103       0           0          0
+[   25.900000]  5580(116)    0        0         0   -103       0           0          0
+[   25.910000]  5600(120)    0        0         0   -103       1           0          0
+[   25.920000]  5620(124)    0        0         0   -103       1           0          0
+[   25.930000]  5640(128)    0        0         0   -103       1           0          0
+[   25.940000]  5660(132)    0        0         0   -103       0           0          0
+[   25.940000]  5680(136)    0        0         0   -104       0           0          0
+[   25.950000]  5700(140)    0        0         0   -103       1           0          0
+[   25.960000] OL vap_start +
+[   25.960000] OL vap_start -
+[   25.970000] OL vap_start +
+[   25.970000] OL vap_start -
+[   19.880000] set channellimit = 0
+[   19.900000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.970000]
+[   19.970000]  DES SSID SET=mesh_50d4f77f149a
+[   20.010000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+[Debug ledListenEventHandler:148] Accept a new client.
+[Debug ledClientEventHandler:110] GPIOD received led rule: LED_SYS_INIT_OK.
+[   20.080000] [Debug led_proc_write:623] Write led_yellow.
+[   20.080000] [Debug led_common_write_proc:470] Execute LED action:    { 1   0   0   0   0 }
+[   20.110000] [Debug led_proc_write:623] Write led_green.
+[   20.120000] [Debug led_common_write_proc:470] Execute LED action:    { 3   0   500 500 4 }
+now ok to start tddp---------------------
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:sign-flag), read from special ptn.
+[   20.150000] ath_spi_uid_read 0x39313633
+[   20.150000] ath_spi_uid_read 0x340b2304
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:signature), read from special ptn.
+
+Rsa verify success
+[NM_Debug](parsePtnTableFromNvramToStruct) 00180: NM_PTN_TABLE_BASE = 0x20000
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[TDDP_DEBUG]<debug>[main:1213] tddp init---
+Reading topology file /tmp/topologyBkhAp.conf ...
+819.901: Reading radio configuration file /tmp/80211g.ap_radio ...
+
+819.902: Reading bss co[   20.380000]  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+nfiguration file[   20.380000] osif_vap_stop: Scan in progress.. Cancelling it. vap: 0x851f0000
+ /tmp/bkhAp.ap_bss ...
+
+Using interface bkhap1 with hwaddr 56:d4:f7:7f:14:9b and ssid 'mesh_50d4f77f149a'
+[   20.520000]
+[   20.520000]  DES SSID SET=mesh_50d4f77f149a
+[   20.530000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+l2_packet_receive - recvfrom: Network is down
+route: SIOCDELRT: No such process
+connect: No such file or directory
+[   25.760000] ACS failed to derive the channel. So,selecting channel with least BSS
+[   25.770000] random channel is 40
+[   25.780000] ******** ACS report ********
+[   25.790000]  Channel | BSS  | minrssi | maxrssi | NF | Ch load | spect load | sec_chan
+[   25.800000] ---------------------------------------------------------------------
+[   25.800000]  5180( 36)    1        7         7    -99       2           0          1
+[   25.810000]  5200( 40)    0        0         0    -99       1           0          1
+[   25.820000]  5220( 44)    0        0         0   -100       1           0          1
+[   25.830000]  5240( 48)    1       19        19   -100       1           0          1
+[   25.840000]  5260( 52)    0        0         0   -101       0           0          0
+[   25.850000]  5280( 56)    0        0         0   -101       0           0          0
+[   25.850000]  5300( 60)    0        0         0   -101       0           0          0
+[   25.860000]  5320( 64)    0        0         0   -102       0           0          0
+[   25.870000]  5500(100)    0        0         0   -103       0           0          0
+[   25.880000]  5520(104)    0        0         0   -102       0           0          0
+[   25.890000]  5540(108)    0        0         0   -103       0           0          0
+[   25.890000]  5560(112)    0        0         0   -103       0           0          0
+[   25.900000]  5580(116)    0        0         0   -103       0           0          0
+[   25.910000]  5600(120)    0        0         0   -103       1           0          0
+[   25.920000]  5620(124)    0        0         0   -103       1           0          0
+[   25.930000]  5640(128)    0        0         0   -103       1           0          0
+[   25.940000]  5660(132)    0        0         0   -103       0           0          0
+[   25.940000]  5680(136)    0        0         0   -104       0           0          0
+[   25.950000]  5700(140)    0        0         0   -103       1           0          0
+[   25.960000] OL vap_start +
+[   25.960000] OL vap_start -
+[   25.970000] OL vap_start +
+[   25.970000] OL vap_start -
+List Flushed
+[   19.880000] set channellimit = 0
+[   19.900000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.970000]
+[   19.970000]  DES SSID SET=mesh_50d4f77f149a
+[   20.010000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+[Debug ledListenEventHandler:148] Accept a new client.
+[Debug ledClientEventHandler:110] GPIOD received led rule: LED_SYS_INIT_OK.
+[   20.080000] [Debug led_proc_write:623] Write led_yellow.
+[   20.080000] [Debug led_common_write_proc:470] Execute LED action:    { 1   0   0   0   0 }
+[   20.110000] [Debug led_proc_write:623] Write led_green.
+[   20.120000] [Debug led_common_write_proc:470] Execute LED action:    { 3   0   500 500 4 }
+now ok to start tddp---------------------
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:sign-flag), read from special ptn.
+[   20.150000] ath_spi_uid_read 0x39313633
+[   20.150000] ath_spi_uid_read 0x340b2304
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:signature), read from special ptn.
+
+Rsa verify success
+[NM_Debug](parsePtnTableFromNvramToStruct) 00180: NM_PTN_TABLE_BASE = 0x20000
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[TDDP_DEBUG]<debug>[main:1213] tddp init---
+Reading topology file /tmp/topologyBkhAp.conf ...
+819.901: Reading radio configuration file /tmp/80211g.ap_radio ...
+
+819.902: Reading bss co[   20.380000]  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+nfiguration file[   20.380000] osif_vap_stop: Scan in progress.. Cancelling it. vap: 0x851f0000
+ /tmp/bkhAp.ap_bss ...
+
+Using interface bkhap1 with hwaddr 56:d4:f7:7f:14:9b and ssid 'mesh_50d4f77f149a'
+[   20.520000]
+[   20.520000]  DES SSID SET=mesh_50d4f77f149a
+[   20.530000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+l2_packet_receive - recvfrom: Network is down
+route: SIOCDELRT: No such process
+connect: No such file or directory
+[   25.760000] ACS failed to derive the channel. So,selecting channel with least BSS
+[   25.770000] random channel is 40
+[   25.780000] ******** ACS report ********
+[   25.790000]  Channel | BSS  | minrssi | maxrssi | NF | Ch load | spect load | sec_chan
+[   25.800000] ---------------------------------------------------------------------
+[   25.800000]  5180( 36)    1        7         7    -99       2           0          1
+[   25.810000]  5200( 40)    0        0         0    -99       1           0          1
+[   25.820000]  5220( 44)    0        0         0   -100       1           0          1
+[   25.830000]  5240( 48)    1       19        19   -100       1           0          1
+[   25.840000]  5260( 52)    0        0         0   -101       0           0          0
+[   25.850000]  5280( 56)    0        0         0   -101       0           0          0
+[   25.850000]  5300( 60)    0        0         0   -101       0           0          0
+[   25.860000]  5320( 64)    0        0         0   -102       0           0          0
+[   25.870000]  5500(100)    0        0         0   -103       0           0          0
+[   25.880000]  5520(104)    0        0         0   -102       0           0          0
+[   25.890000]  5540(108)    0        0         0   -103       0           0          0
+[   25.890000]  5560(112)    0        0         0   -103       0           0          0
+[   25.900000]  5580(116)    0        0         0   -103       0           0          0
+[   25.910000]  5600(120)    0        0         0   -103       1           0          0
+[   25.920000]  5620(124)    0        0         0   -103       1           0          0
+[   25.930000]  5640(128)    0        0         0   -103       1           0          0
+[   25.940000]  5660(132)    0        0         0   -103       0           0          0
+[   25.940000]  5680(136)    0        0         0   -104       0           0          0
+[   25.950000]  5700(140)    0        0         0   -103       1           0          0
+[   25.960000] OL vap_start +
+[   25.960000] OL vap_start -
+[   25.970000] OL vap_start +
+[   25.970000] OL vap_start -
+bkhap1
+[   19.720000]  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+List Flushed
+[   19.880000] set channellimit = 0
+[   19.900000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.970000]
+[   19.970000]  DES SSID SET=mesh_50d4f77f149a
+[   20.010000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+[Debug ledListenEventHandler:148] Accept a new client.
+[Debug ledClientEventHandler:110] GPIOD received led rule: LED_SYS_INIT_OK.
+[   20.080000] [Debug led_proc_write:623] Write led_yellow.
+[   20.080000] [Debug led_common_write_proc:470] Execute LED action:    { 1   0   0   0   0 }
+[   20.110000] [Debug led_proc_write:623] Write led_green.
+[   20.120000] [Debug led_common_write_proc:470] Execute LED action:    { 3   0   500 500 4 }
+now ok to start tddp---------------------
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:sign-flag), read from special ptn.
+[   20.150000] ath_spi_uid_read 0x39313633
+[   20.150000] ath_spi_uid_read 0x340b2304
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:signature), read from special ptn.
+
+Rsa verify success
+[NM_Debug](parsePtnTableFromNvramToStruct) 00180: NM_PTN_TABLE_BASE = 0x20000
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[TDDP_DEBUG]<debug>[main:1213] tddp init---
+Reading topology file /tmp/topologyBkhAp.conf ...
+819.901: Reading radio configuration file /tmp/80211g.ap_radio ...
+
+819.902: Reading bss co[   20.380000]  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+nfiguration file[   20.380000] osif_vap_stop: Scan in progress.. Cancelling it. vap: 0x851f0000
+ /tmp/bkhAp.ap_bss ...
+
+Using interface bkhap1 with hwaddr 56:d4:f7:7f:14:9b and ssid 'mesh_50d4f77f149a'
+[   20.520000]
+[   20.520000]  DES SSID SET=mesh_50d4f77f149a
+[   20.530000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+l2_packet_receive - recvfrom: Network is down
+route: SIOCDELRT: No such process
+connect: No such file or directory
+[   25.760000] ACS failed to derive the channel. So,selecting channel with least BSS
+[   25.770000] random channel is 40
+[   25.780000] ******** ACS report ********
+[   25.790000]  Channel | BSS  | minrssi | maxrssi | NF | Ch load | spect load | sec_chan
+[   25.800000] ---------------------------------------------------------------------
+[   25.800000]  5180( 36)    1        7         7    -99       2           0          1
+[   25.810000]  5200( 40)    0        0         0    -99       1           0          1
+[   25.820000]  5220( 44)    0        0         0   -100       1           0          1
+[   25.830000]  5240( 48)    1       19        19   -100       1           0          1
+[   25.840000]  5260( 52)    0        0         0   -101       0           0          0
+[   25.850000]  5280( 56)    0        0         0   -101       0           0          0
+[   25.850000]  5300( 60)    0        0         0   -101       0           0          0
+[   25.860000]  5320( 64)    0        0         0   -102       0           0          0
+[   25.870000]  5500(100)    0        0         0   -103       0           0          0
+[   25.880000]  5520(104)    0        0         0   -102       0           0          0
+[   25.890000]  5540(108)    0        0         0   -103       0           0          0
+[   25.890000]  5560(112)    0        0         0   -103       0           0          0
+[   25.900000]  5580(116)    0        0         0   -103       0           0          0
+[   25.910000]  5600(120)    0        0         0   -103       1           0          0
+[   25.920000]  5620(124)    0        0         0   -103       1           0          0
+[   25.930000]  5640(128)    0        0         0   -103       1           0          0
+[   25.940000]  5660(132)    0        0         0   -103       0           0          0
+[   25.940000]  5680(136)    0        0         0   -104       0           0          0
+[   25.950000]  5700(140)    0        0         0   -103       1           0          0
+[   25.960000] OL vap_start +
+[   25.960000] OL vap_start -
+[   25.970000] OL vap_start +
+[   25.970000] OL vap_start -
+bkhap1
+[   19.720000]  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+List Flushed
+[   19.880000] set channellimit = 0
+[   19.900000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x85c0c000
+[   19.970000]
+[   19.970000]  DES SSID SET=mesh_50d4f77f149a
+[   20.010000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+[Debug ledListenEventHandler:148] Accept a new client.
+[Debug ledClientEventHandler:110] GPIOD received led rule: LED_SYS_INIT_OK.
+[   20.080000] [Debug led_proc_write:623] Write led_yellow.
+[   20.080000] [Debug led_common_write_proc:470] Execute LED action:    { 1   0   0   0   0 }
+[   20.110000] [Debug led_proc_write:623] Write led_green.
+[   20.120000] [Debug led_common_write_proc:470] Execute LED action:    { 3   0   500 500 4 }
+now ok to start tddp---------------------
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:sign-flag), read from special ptn.
+[   20.150000] ath_spi_uid_read 0x39313633
+[   20.150000] ath_spi_uid_read 0x340b2304
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:signature), read from special ptn.
+
+Rsa verify success
+[NM_Debug](parsePtnTableFromNvramToStruct) 00180: NM_PTN_TABLE_BASE = 0x20000
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[TDDP_DEBUG]<debug>[main:1213] tddp init---
+Reading topology file /tmp/topologyBkhAp.conf ...
+819.901: Reading radio configuration file /tmp/80211g.ap_radio ...
+
+819.902: Reading bss co[   20.380000]  ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+nfiguration file[   20.380000] osif_vap_stop: Scan in progress.. Cancelling it. vap: 0x851f0000
+ /tmp/bkhAp.ap_bss ...
+
+Using interface bkhap1 with hwaddr 56:d4:f7:7f:14:9b and ssid 'mesh_50d4f77f149a'
+[   20.520000]
+[   20.520000]  DES SSID SET=mesh_50d4f77f149a
+[   20.530000] osif_vap_init: Scan in progress.. Cancelling it. vap: 0x851f0000
+l2_packet_receive - recvfrom: Network is down
+route: SIOCDELRT: No such process
+connect: No such file or directory
+[   25.760000] ACS failed to derive the channel. So,selecting channel with least BSS
+[   25.770000] random channel is 40
+[   25.780000] ******** ACS report ********
+[   25.790000]  Channel | BSS  | minrssi | maxrssi | NF | Ch load | spect load | sec_chan
+[   25.800000] ---------------------------------------------------------------------
+[   25.800000]  5180( 36)    1        7         7    -99       2           0          1
+[   25.810000]  5200( 40)    0        0         0    -99       1           0          1
+[   25.820000]  5220( 44)    0        0         0   -100       1           0          1
+[   25.830000]  5240( 48)    1       19        19   -100       1           0          1
+[   25.840000]  5260( 52)    0        0         0   -101       0           0          0
+[   25.850000]  5280( 56)    0        0         0   -101       0           0          0
+[   25.850000]  5300( 60)    0        0         0   -101       0           0          0
+[   25.860000]  5320( 64)    0        0         0   -102       0           0          0
+[   25.870000]  5500(100)    0        0         0   -103       0           0          0
+[   25.880000]  5520(104)    0        0         0   -102       0           0          0
+[   25.890000]  5540(108)    0        0         0   -103       0           0          0
+[   25.890000]  5560(112)    0        0         0   -103       0           0          0
+[   25.900000]  5580(116)    0        0         0   -103       0           0          0
+[   25.910000]  5600(120)    0        0         0   -103       1           0          0
+[   25.920000]  5620(124)    0        0         0   -103       1           0          0
+[   25.930000]  5640(128)    0        0         0   -103       1           0          0
+[   25.940000]  5660(132)    0        0         0   -103       0           0          0
+[   25.940000]  5680(136)    0        0         0   -104       0           0          0
+[   25.950000]  5700(140)    0        0         0   -103       1           0          0
+[   25.960000] OL vap_start +
+[   25.960000] OL vap_start -
+[   25.970000] OL vap_start +
+[   25.970000] OL vap_start -
+uclite init ok, now startup eap-cs ---------------------
+httpMudCreate: MUD 0x4b9cb0 was created
+[utilities_debug: httpSystemFirmwareInit:269]register rpm
+httpServerCreate------------------
+httpMudCreate: MUD 0x4b9cb0 was created
+[utilities_debug: httpSystemFirmwareInit:269]register rpm
+httpServerCreate------------------
+httpServerCreate: try to add port 22080
+httpServerCreate: try to add port 80
+Into util_dbg_setMod, pModName(all), enable(1)
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionName) 00192: Flash region info, code: 276, name: EU.
+
+[NM_Debug](nm_lib_readPtnFromNvram) 00736: partition name not found(name:region), read from special ptn.
+[NM_Debug](nm_region_getRegionCode) 00172: Flash region info, code: 276, name: EU.
+
